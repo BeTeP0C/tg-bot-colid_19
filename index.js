@@ -14,7 +14,8 @@ const checkNaN = (number) => {
     }
 }
 
-bot.start(ctx => ctx.reply(`Добро пожаловать ${ctx.message.from.first_name}.
+bot.start(ctx => {
+    ctx.reply(`Добро пожаловать ${ctx.message.from.first_name}.
 
 Я могу показать информацию о коронавирусе.
 
@@ -25,7 +26,10 @@ bot.start(ctx => ctx.reply(`Добро пожаловать ${ctx.message.from.f
     [Markup.button.callback("США", "Us"), Markup.button.callback("Россия", "Russian")],
     [Markup.button.callback("Украина", "украина"), Markup.button.callback("Белоррусия", "Белоруссия")],
 ]
-).resize()));
+).resize());
+
+console.log("Информация об отправке",ctx.message);
+});
 
 bot.help(ctx => {ctx.reply(COUNTRYS_LIST)})
 
