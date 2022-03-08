@@ -28,7 +28,7 @@ bot.start(ctx => {
 ]
 ).resize());
 
-console.log("Информация об отправке",ctx.message);
+console.log("Информация об отправителе",ctx.message);
 });
 
 bot.help(ctx => {ctx.reply(COUNTRYS_LIST)})
@@ -58,6 +58,8 @@ bot.on('text', async ctx => {
         console.log("Ошибка");
         ctx.reply(`Данная страна не найденна: ${ctx.message.text}, воспользуйтесь /help`);
     }
+
+    console.log("Информация об отправке", ctx.message);
 });
 
 
