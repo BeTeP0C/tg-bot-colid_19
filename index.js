@@ -15,16 +15,16 @@ const checkNaN = (number) => {
 }
 
 bot.start(ctx => {
-    ctx.reply(`Добро пожаловать ${ctx.message.from.first_name}👋.
+    ctx.reply(`Добро пожаловать ${ctx.message.from.first_name} 👋.
 
-Я могу показать информацию о коронавирусе🦠.
+Я могу показать информацию о коронавирусе 🦠.
 
-Введи название страны и получи статистику📈.
+Введи название страны и получи статистику 📈.
 
 Посмотреть названия всех стран на английском можно с помощью команды /help`, Markup.keyboard(
 [
-    [Markup.button.callback("США\ud83c\uddfa\ud83c\uddf2", "Us"), Markup.button.callback("Россия\ud83c\udde7\ud83c\uddfe", "Russian")],
-    [Markup.button.callback("Украина\ud83c\uddfa\ud83c\udde6", "украина"), Markup.button.callback("Белоррусия\ud83c\uddf7\ud83c\uddfa", "Белоруссия")],
+    [Markup.button.callback("США\ud83c\uddfa\ud83c\uddf2", "Us"), Markup.button.callback("Россия\ud83c\uddf7\ud83c\uddfa", "Russian")],
+    [Markup.button.callback("Украина\ud83c\uddfa\ud83c\udde6", "украина"), Markup.button.callback("Белоррусия\ud83c\udde7\ud83c\uddfe", "Белоруссия")],
 ]
 ).resize());
 
@@ -34,7 +34,7 @@ console.log("Информация об отправителе",ctx.message);
 bot.help(ctx => {ctx.reply(COUNTRYS_LIST)})
 
 bot.on('text', async ctx => {
-    const text = await translate(ctx.message.text.split("/")[0], "en");
+    const text = await translate(ctx.message.text.split("\\")[0], "en");
     const chatId = ctx.message.from.id;
     try {
         sentText = "";
