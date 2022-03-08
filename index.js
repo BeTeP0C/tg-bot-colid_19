@@ -58,3 +58,4 @@ bot.on('text', async ctx => {
 
 
 bot.launch();
+console.log("Бот запущен");
