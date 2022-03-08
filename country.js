@@ -45,6 +45,12 @@ uganda uk ukraine united-arab-emirates uruguay us uzbekistan
 venezuela, viet-nam
 
 zambia, zimbabwe.
-`
+`;
+
+// const emoji = {
+//     flag: {
+//         russia: 
+//     }
+// }
 
 module.exports = COUNTRYS_LIST;

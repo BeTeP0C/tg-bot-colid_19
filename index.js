@@ -23,7 +23,7 @@ bot.start(ctx => {
 
 Посмотреть названия всех стран на английском можно с помощью команды /help`, Markup.keyboard(
 [
-    [Markup.button.callback("США&#127482", "Us"), Markup.button.callback("Россия&#127479", "Russian")],
+    [Markup.button.callback("США&🇺🇲", "Us"), Markup.button.callback("Россия&#127479", "Russian")],
     [Markup.button.callback("Украина&#127482", "украина"), Markup.button.callback("Белоррусия&#127463", "Белоруссия")],
 ]
 ).resize());
